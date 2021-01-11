@@ -13,10 +13,15 @@ console.log(isNumber(8))
 * @returns {boolean} - Is val truthy
 */
 function isTruthy(val) {
-  return typeof(val) !== false
+  if(val) {
+    return true
+  }
+  else {
+    return false
+  }
 }
 
-console.log(isTruthy(10))
+console.log(isTruthy(0))
 
 module.exports = {
   isNumber,

@@ -24,16 +24,28 @@ console.log(evenNumbers(5))
 * @returns {number[]} - An array of all multiples of {num} up to 1000
 */
 function multiplesToOneThousand(num) {
+  // let array = []
+  // for (let i = 0; i * num <= 1000; i++) {
+  //   array.push(i * num)
+  // }
+  // return array
+
   let array = []
-  let start = 0
-  while (start <= 1000) {
-    array.push(start);
-    start = start + num;
+  let i = 0
+
+  while (i <= 1000) {
+    array.push(i);
+    i = i + num;
   }
   return array
 }
 
-console.log(multiplesToOneThousand(10))
+console.log(multiplesToOneThousand(15))
+
+
+
+
+
 
 /** Returns the first n powers of 2 (starting at 0)
 * Sample input: 6
@@ -43,9 +55,34 @@ console.log(multiplesToOneThousand(10))
 * @returns {number[]} - An array with the first {count} powers of two
 */
 function powersOfTwo(count) {
+  let array = []
+  for (let i = 0; i < count; i = i + 1) {
+    array.push(2 ** i)
+  }
+  return array
 
 }
 
+console.log(powersOfTwo(6))  
+
+
+// let array = []
+  // let n = 0
+  // array[0] = 1
+
+  // for (let i = 0; i < count - 1; i = i + 1) {
+  //   array.push(array[i] * 2);
+  // }
+  // return array
+
+
+// for (let i = 0; i < count; i += 1) {
+  //   array[i] = 1;
+  //   for (let j = 0; j < i; j = j + 1) {
+  //     array[i] = array[i] * 2
+  //   }
+  // }
+  // return array
 module.exports = {
   evenNumbers,
   multiplesToOneThousand,

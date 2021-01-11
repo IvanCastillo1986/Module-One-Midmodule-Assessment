@@ -25,8 +25,7 @@ console.log(greeting("Myra"))
 * @modifies {global.globalCount}
 */
 function incrementGlobalCount(val) {
-  global.globalCount = val
-  return global.globalCount
+  global.globalCount += val
 }
 
 console.log(incrementGlobalCount(3))
